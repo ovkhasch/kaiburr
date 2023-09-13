@@ -6,7 +6,7 @@ Job:
       collectSonarScans: true
       collectToolHierarchyData: false
       collectToolMetadata: true
-      resultsToKeep: 30
+      resultsToKeep: 32
       displayDebugMessage: false
   repositoryLink: kaiburr-dev
   hidden: false
