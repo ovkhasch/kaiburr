@@ -1,0 +1,6 @@
+---
+Job:
+  name: Templates
+  repositoryLink: kaiburr-dev
+  hidden: false
+  addChildGroupsToDataScope: true
