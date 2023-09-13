@@ -1,0 +1,10 @@
+---
+Job:
+  name: Templates
+  payload:
+    RulesetJobPayload:
+      rulesetBlueprint: test
+      resultsToKeep: 30
+  repositoryLink: kaiburr-dev
+  hidden: false
+  addChildGroupsToDataScope: true
