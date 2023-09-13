@@ -1,0 +1,13 @@
+---
+Job:
+  name: Sonar Threshold Check
+  payload:
+    SonarCollectorJobPayload:
+      collectSonarScans: true
+      collectToolHierarchyData: false
+      collectToolMetadata: true
+      resultsToKeep: 30
+      displayDebugMessage: false
+  repositoryLink: kaiburr-dev
+  hidden: false
+  addChildGroupsToDataScope: true
