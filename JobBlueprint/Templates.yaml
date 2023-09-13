@@ -4,7 +4,7 @@ Job:
   payload:
     RulesetJobPayload:
       rulesetBlueprint: test
-      resultsToKeep: 30
+      resultsToKeep: 32
   repositoryLink: kaiburr-dev
   hidden: false
   addChildGroupsToDataScope: true
