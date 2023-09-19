@@ -1,6 +1,0 @@
----
-Job:
-  name: something
-  repositoryLink: kaiburr-dev
-  hidden: false
-  addChildGroupsToDataScope: true
