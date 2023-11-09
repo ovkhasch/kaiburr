@@ -1,0 +1,10 @@
+---
+Job:
+  name: jjj
+  payload:
+    RulesetJobPayload:
+      rulesetBlueprint: test
+      resultsToKeep: 30
+  repositoryLink: kaiburr-main
+  hidden: false
+  addChildGroupsToDataScope: true
