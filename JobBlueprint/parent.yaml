@@ -1,0 +1,6 @@
+---
+Job:
+  name: parent
+  repositoryLink: kaiburr-dev
+  hidden: false
+  addChildGroupsToDataScope: true
