@@ -1,6 +1,6 @@
 ---
 Job:
-  name: parent2
+  name: parent
   payload:
     RulesetJobPayload:
       resultsToKeep: 30
