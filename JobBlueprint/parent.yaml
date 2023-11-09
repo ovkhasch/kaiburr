@@ -1,6 +1,10 @@
 ---
 Job:
   name: parent
+  payload:
+    RulesetJobPayload:
+      resultsToKeep: 30
+      jobSize: "M: 1 cpu, 2G memory"
   repositoryLink: kaiburr-dev
   hidden: false
   addChildGroupsToDataScope: true
