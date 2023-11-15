@@ -2,7 +2,8 @@
 Job:
   name: parent
   payload:
-    NexusCollectorJobPayload:
+    NexusIQCollectorJobPayload:
+      apiTimeout: 0
       resultsToKeep: 30
       displayDebugMessage: false
   repositoryLink: kaiburr-main
