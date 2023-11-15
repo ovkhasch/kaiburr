@@ -2,10 +2,8 @@
 Job:
   name: parent
   payload:
-    NexusIQCollectorJobPayload:
-      apiTimeout: 0
+    OctaneCollectorJobPayload:
       resultsToKeep: 30
       displayDebugMessage: false
-  repositoryLink: kaiburr-main
   hidden: false
   addChildGroupsToDataScope: true
