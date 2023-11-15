@@ -3,6 +3,8 @@ Job:
   name: parent
   payload:
     RulesetJobPayload:
+      parameters:
+        aaa: 1
       resultsToKeep: 30
       jobSize: "M: 1 cpu, 2G memory"
   repositoryLink: kaiburr-dev
