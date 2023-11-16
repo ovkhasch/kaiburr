@@ -3,7 +3,7 @@
     
   <bpmn2:process id="Proc_Je6JeByHK" isClosed="false" isExecutable="true" kaiburr:workflowType="workflow" name="aaa" processType="None">
         
-    <bpmn2:startEvent id="StartEvent_1" isInterrupting="true" name="qqq" parallelMultiple="false">
+    <bpmn2:startEvent id="StartEvent_1" isInterrupting="true" name="qq" parallelMultiple="false">
             
       <bpmn2:outgoing>Flow_1ka63m9</bpmn2:outgoing>
           
@@ -37,7 +37,7 @@
                 
         <bpmndi:BPMNLabel>
                     
-          <dc:Bounds height="14" width="19" x="421" y="283"/>
+          <dc:Bounds height="14" width="13" x="424" y="283"/>
                   
         </bpmndi:BPMNLabel>
               
