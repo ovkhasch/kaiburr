@@ -8,6 +8,5 @@ Job:
       collectToolMetadata: true
       resultsToKeep: 32
       displayDebugMessage: false
-  repositoryLink: kaiburr-dev
   hidden: false
   addChildGroupsToDataScope: true
