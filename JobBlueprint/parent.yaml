@@ -3,7 +3,8 @@ Job:
   name: parent
   payload:
     OctaneCollectorJobPayload:
-      resultsToKeep: 26
+      resultsToKeep: 27
       displayDebugMessage: false
+  repositoryCommit: f12f33301cfda1d1c7edeaee35885203dcca900e
   hidden: false
   addChildGroupsToDataScope: true
