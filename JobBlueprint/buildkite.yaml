@@ -5,5 +5,7 @@ Job:
     OctaneCollectorJobPayload:
       resultsToKeep: 30
       displayDebugMessage: false
+      debugMode: false
+  maxDuration: 24
   hidden: false
   addChildGroupsToDataScope: true
