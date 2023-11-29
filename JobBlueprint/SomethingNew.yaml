@@ -1,0 +1,11 @@
+---
+Job:
+  name: SomethingNew
+  payload:
+    TagClassifierJobPayload:
+      resultsToKeep: 30
+      config: false
+      trainModel: false
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true
