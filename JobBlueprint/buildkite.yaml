@@ -4,7 +4,7 @@ Job:
   payload:
     OctaneCollectorJobPayload:
       resultsToKeep: 31
-      displayDebugMessage: false
+      displayDebugMessage: true
       debugMode: false
   maxDuration: 24
   hidden: false
