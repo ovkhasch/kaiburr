@@ -6,6 +6,6 @@ Job:
       resultsToKeep: 31
       displayDebugMessage: true
       debugMode: false
-  maxDuration: 25
+  maxDuration: 24
   hidden: false
   addChildGroupsToDataScope: true
