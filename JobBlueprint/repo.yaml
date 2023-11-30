@@ -1,2 +1,5 @@
 ---
-JobBlueprint:
+Job:
+  name: repo
+  payload:
+    OctaneCollectorJobPayload:
