@@ -3,7 +3,7 @@ Job:
   name: buildkite
   payload:
     OctaneCollectorJobPayload:
-      resultsToKeep: 31
+      resultsToKeep: 312
       displayDebugMessage: true
       debugMode: false
   maxDuration: 27
