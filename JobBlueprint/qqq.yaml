@@ -1,0 +1,16 @@
+---
+Job:
+  name: qqq
+  payload:
+    OctopusJobPayload:
+      jobNameRegex: false
+      recursive: false
+      limitExecutions: 0
+      limitLogs: 0
+      resultsToKeep: 30
+      displayDebugMessage: false
+      debugMode: false
+      collectToolHierarchyData: false
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true
