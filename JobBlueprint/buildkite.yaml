@@ -3,9 +3,9 @@ Job:
   name: buildkite
   payload:
     OctaneCollectorJobPayload:
-      resultsToKeep: 313
+      resultsToKeep: 35
       displayDebugMessage: true
       debugMode: false
-  maxDuration: 29
+  maxDuration: 24
   hidden: false
   addChildGroupsToDataScope: true
