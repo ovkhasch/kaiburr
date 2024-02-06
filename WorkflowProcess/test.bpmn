@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:kaiburr="https://app.kaiburr.com/schema/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:kaiburr="https://app.kaiburr.com/schema/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     
   <bpmn2:process id="Proc_M9nFqCIRW" isClosed="false" isExecutable="true" kaiburr:workflowType="workflow" name="test" processType="None">
         
@@ -11,11 +11,21 @@
         
     <bpmn2:endEvent id="Event_0i1zu6q">
             
-      <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
+      <bpmn2:incoming>Flow_1frwtk8</bpmn2:incoming>
           
     </bpmn2:endEvent>
         
-    <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Event_0i1zu6q"/>
+    <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Activity_0cxa7j1"/>
+        
+    <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_0cxa7j1" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="jenkins" kaiburr:configName="jenkins" kaiburr:projectName="freestyle-test" kaiburr:subType="kaiburr:JenkinsTask" name="jenkins" startQuantity="1">
+            
+      <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
+            
+      <bpmn2:outgoing>Flow_1frwtk8</bpmn2:outgoing>
+          
+    </bpmn2:serviceTask>
+        
+    <bpmn2:sequenceFlow id="Flow_1frwtk8" sourceRef="Activity_0cxa7j1" targetRef="Event_0i1zu6q"/>
       
   </bpmn2:process>
     
@@ -27,7 +37,15 @@
                 
         <di:waypoint x="448" y="258"/>
                 
-        <di:waypoint x="502" y="258"/>
+        <di:waypoint x="500" y="258"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1frwtk8" id="Flow_1frwtk8_di">
+                
+        <di:waypoint x="600" y="258"/>
+                
+        <di:waypoint x="642" y="258"/>
               
       </bpmndi:BPMNEdge>
             
@@ -45,7 +63,13 @@
             
       <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
                 
-        <dc:Bounds height="36" width="36" x="502" y="240"/>
+        <dc:Bounds height="36" width="36" x="642" y="240"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_0cxa7j1" id="Activity_0cxa7j1_di">
+                
+        <dc:Bounds height="80" width="100" x="500" y="218"/>
               
       </bpmndi:BPMNShape>
           
