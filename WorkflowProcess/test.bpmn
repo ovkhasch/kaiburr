@@ -33,19 +33,19 @@
         
     <bpmndi:BPMNPlane bpmnElement="Proc_M9nFqCIRW" id="BPMNPlane_1">
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_09hqeh1" id="Flow_09hqeh1_di">
-                
-        <di:waypoint x="448" y="258"/>
-                
-        <di:waypoint x="500" y="258"/>
-              
-      </bpmndi:BPMNEdge>
-            
       <bpmndi:BPMNEdge bpmnElement="Flow_1frwtk8" id="Flow_1frwtk8_di">
                 
         <di:waypoint x="600" y="258"/>
                 
         <di:waypoint x="642" y="258"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_09hqeh1" id="Flow_09hqeh1_di">
+                
+        <di:waypoint x="448" y="258"/>
+                
+        <di:waypoint x="500" y="258"/>
               
       </bpmndi:BPMNEdge>
             
