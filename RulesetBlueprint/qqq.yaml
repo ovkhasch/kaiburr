@@ -1,0 +1,14 @@
+---
+RulesetBlueprint:
+  name: qqq
+  resultSettings:
+    storePassedItems: true
+    limit: 50
+  rules:
+  - name: qqq
+    ruleEngine: GROOVY
+    ruleCategory: COMPLIANCE_CONTROLS
+    ruleSeverity: MEDIUM
+    resultSettings:
+      storePassedItems: true
+      limit: 50
