@@ -1,0 +1,20 @@
+---
+RestBlueprint:
+  name: aaa
+  toolName: aaa
+  requests:
+  - RestRequest:
+      name: aaa
+      actionName: CREATE
+      subActionName: bbb
+      method: GET
+      url: qwqw
+      auth:
+        type: apikey
+        json: "{}"
+      headerJson: "[]"
+      body:
+        mode: none
+        json: "{}"
+  debugMode: false
+  verifySsl: true
