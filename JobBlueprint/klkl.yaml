@@ -1,0 +1,6 @@
+---
+Job:
+  name: klkl
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true
