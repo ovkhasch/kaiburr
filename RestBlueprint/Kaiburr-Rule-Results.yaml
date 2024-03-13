@@ -6,7 +6,7 @@ RestBlueprint:
   - RestRequest:
       name: getLatestRuleResultById
       actionName: READ
-      subActionName: getRuleResult
+      subActionName: getLatestRuleResultById
       method: GET
       url: "{{serverUrl}}/api/rules/{{rulesetId}}?latest=true"
       auth:
@@ -33,7 +33,7 @@ RestBlueprint:
   - RestRequest:
       name: getRuleResultByJobRun
       actionName: READ
-      subActionName: getRuleResult
+      subActionName: getRuleResultByJobRun
       method: GET
       url: "{{serverUrl}}/api/rules/{{rulesetId}}?jobRunId={{jobRunId}}"
       auth:
