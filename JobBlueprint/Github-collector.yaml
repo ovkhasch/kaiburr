@@ -3,7 +3,7 @@ Job:
   name: Github-collector
   payload:
     GithubCollectorJobPayload:
-      configurationBlueprint: testing-dev
+      configurationBlueprint: repolink-testing
       configName: Github-ovkhasch-kaiburr
       branchNameRegex: false
       collectRepositoryData: true
