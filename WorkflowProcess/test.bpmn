@@ -15,11 +15,11 @@
           
     </bpmn2:endEvent>
         
-    <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Activity_0cxa7j1"/>
+    <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Activity_09pgqwc"/>
         
     <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_0cxa7j1" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="repolinkTesting" kaiburr:configName="jenkins" kaiburr:projectName="freestyle-test" kaiburr:subType="kaiburr:JenkinsTask" name="jenkins" startQuantity="1">
             
-      <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
+      <bpmn2:incoming>Flow_19hvbvd</bpmn2:incoming>
             
       <bpmn2:outgoing>Flow_1frwtk8</bpmn2:outgoing>
           
@@ -56,6 +56,16 @@
     </bpmn2:serviceTask>
         
     <bpmn2:sequenceFlow id="Flow_1hgfnda" sourceRef="Activity_0mllogz" targetRef="Event_0i1zu6q"/>
+        
+    <bpmn2:serviceTask camunda:topic="RestTask" camunda:type="external" completionQuantity="1" id="Activity_09pgqwc" implementation="##WebService" isForCompensation="false" kaiburr:actionName="Get" kaiburr:subActionName="getRuleResult" kaiburr:subType="kaiburr:RestTask" kaiburr:toolName="Kaiburr-Api" name="rest" startQuantity="1">
+            
+      <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
+            
+      <bpmn2:outgoing>Flow_19hvbvd</bpmn2:outgoing>
+          
+    </bpmn2:serviceTask>
+        
+    <bpmn2:sequenceFlow id="Flow_19hvbvd" sourceRef="Activity_09pgqwc" targetRef="Activity_0cxa7j1"/>
       
   </bpmn2:process>
     
@@ -97,23 +107,19 @@
             
       <bpmndi:BPMNEdge bpmnElement="Flow_09hqeh1" id="Flow_09hqeh1_di">
                 
-        <di:waypoint x="448" y="258"/>
+        <di:waypoint x="308" y="258"/>
+                
+        <di:waypoint x="350" y="258"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_19hvbvd" id="Flow_19hvbvd_di">
+                
+        <di:waypoint x="450" y="258"/>
                 
         <di:waypoint x="500" y="258"/>
               
       </bpmndi:BPMNEdge>
-            
-      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
-                
-        <dc:Bounds height="36" width="36" x="412" y="240"/>
-                
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="14" width="19" x="421" y="283"/>
-                  
-        </bpmndi:BPMNLabel>
-              
-      </bpmndi:BPMNShape>
             
       <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
                 
@@ -142,6 +148,24 @@
       <bpmndi:BPMNShape bpmnElement="Activity_0mllogz" id="Activity_0mllogz_di">
                 
         <dc:Bounds height="80" width="100" x="890" y="218"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
+                
+        <dc:Bounds height="36" width="36" x="272" y="240"/>
+                
+        <bpmndi:BPMNLabel>
+                    
+          <dc:Bounds height="14" width="19" x="281" y="283"/>
+                  
+        </bpmndi:BPMNLabel>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_09pgqwc" id="Activity_09pgqwc_di">
+                
+        <dc:Bounds height="80" width="100" x="350" y="218"/>
               
       </bpmndi:BPMNShape>
           
