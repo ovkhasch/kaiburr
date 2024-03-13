@@ -3,6 +3,10 @@ Job:
   name: Sonar Threshold Check
   payload:
     SonarCollectorJobPayload:
+      configurationBlueprint: repolinkTesting
+      sonarConfig: sonar
+      projects:
+      - tomcatHello
       collectSonarScans: true
       collectToolHierarchyData: false
       collectToolMetadata: true
