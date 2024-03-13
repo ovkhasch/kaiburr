@@ -37,7 +37,7 @@
         
     <bpmn2:sequenceFlow id="Flow_1i4be3n" sourceRef="Activity_0pov9z6" targetRef="Activity_19kafkp"/>
         
-    <bpmn2:serviceTask camunda:topic="AssessmentTask" camunda:type="external" completionQuantity="1" id="Activity_19kafkp" implementation="##WebService" isForCompensation="false" kaiburr:applicationName="tomcatHello" kaiburr:assessmentType="Sonarqube" kaiburr:chronoUnit="WEEKS" kaiburr:configBlueprint="repolinkTesting" kaiburr:configName="sonar" kaiburr:subType="kaiburr:AssessmentTask" name="sonar" startQuantity="1">
+    <bpmn2:serviceTask camunda:topic="AssessmentTask" camunda:type="external" completionQuantity="1" id="Activity_19kafkp" implementation="##WebService" isForCompensation="false" kaiburr:applicationName="kaiburr" kaiburr:assessmentType="Sonarqube" kaiburr:branchName="dev" kaiburr:chronoUnit="WEEKS" kaiburr:configBlueprint="repolinkTesting" kaiburr:configName="sonar" kaiburr:repositoryConfig="Git-ovkhasch-kaiburr" kaiburr:subType="kaiburr:AssessmentTask" name="sonar" startQuantity="1">
             
       <bpmn2:incoming>Flow_1i4be3n</bpmn2:incoming>
             
@@ -62,6 +62,14 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         
     <bpmndi:BPMNPlane bpmnElement="Proc_M9nFqCIRW" id="BPMNPlane_1">
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1hgfnda" id="Flow_1hgfnda_di">
+                
+        <di:waypoint x="990" y="258"/>
+                
+        <di:waypoint x="1052" y="258"/>
+              
+      </bpmndi:BPMNEdge>
             
       <bpmndi:BPMNEdge bpmnElement="Flow_06qr6x6" id="Flow_06qr6x6_di">
                 
@@ -95,14 +103,6 @@
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_1hgfnda" id="Flow_1hgfnda_di">
-                
-        <di:waypoint x="990" y="258"/>
-                
-        <di:waypoint x="1052" y="258"/>
-              
-      </bpmndi:BPMNEdge>
-            
       <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
                 
         <dc:Bounds height="36" width="36" x="412" y="240"/>
@@ -112,6 +112,12 @@
           <dc:Bounds height="14" width="19" x="421" y="283"/>
                   
         </bpmndi:BPMNLabel>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
+                
+        <dc:Bounds height="36" width="36" x="1052" y="240"/>
               
       </bpmndi:BPMNShape>
             
@@ -130,12 +136,6 @@
       <bpmndi:BPMNShape bpmnElement="Activity_19kafkp" id="Activity_19kafkp_di">
                 
         <dc:Bounds height="80" width="100" x="750" y="218"/>
-              
-      </bpmndi:BPMNShape>
-            
-      <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
-                
-        <dc:Bounds height="36" width="36" x="1052" y="240"/>
               
       </bpmndi:BPMNShape>
             
