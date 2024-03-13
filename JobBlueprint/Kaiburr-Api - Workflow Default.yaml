@@ -4,7 +4,12 @@ Job:
   payload:
     RestWorkloadPayload:
       toolName: Kaiburr-Api
-      requestName: "${requestName}"
+      requestName: getLatestRuleResultByName
+      parameters:
+        serverUrl: kaiburr-kc
+        name: repolinkTesting
+        username: repolink-testing
+        password: Ucq3w3TAgFDVU5
       resultsToKeep: 100
       default: true
   maxDuration: 24
