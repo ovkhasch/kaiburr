@@ -1,0 +1,6 @@
+---
+ApplicationInventory:
+  name: sadad
+  applications:
+  - Application:
+      name: asdasd

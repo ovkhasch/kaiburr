@@ -1,0 +1,15 @@
+---
+RulesetBlueprint:
+  name: repolinkTesting
+  resultSettings:
+    storePassedItems: true
+    limit: 50
+  rules:
+  - name: whoami
+    ruleEngine: GROOVY
+    ruleCategory: COMPLIANCE_CONTROLS
+    ruleSeverity: MEDIUM
+    rule: itemPassed('repo-kaiburr-dev')
+    resultSettings:
+      storePassedItems: true
+      limit: 50

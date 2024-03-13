@@ -1,0 +1,17 @@
+---
+Job:
+  name: AWS Collector
+  payload:
+    AWSCollectorJobPayload:
+      resultsToKeep: 30
+      displayDebugMessage: false
+      debugMode: false
+      resourceProvider: AWS
+      region: us-east-1
+      awsCollectorOptions:
+        keepOlderRecords: false
+        enableFunctions:
+        - COLLECT_ELASTIC_LOAD_BALANCING
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true

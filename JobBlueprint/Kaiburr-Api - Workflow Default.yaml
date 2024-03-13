@@ -1,0 +1,17 @@
+---
+Job:
+  name: Kaiburr-Api - Workflow Default
+  payload:
+    RestWorkloadPayload:
+      toolName: Kaiburr-Api
+      requestName: getLatestRuleResultByName
+      parameters:
+        password: Ucq3w3TAgFDVU5
+        serverUrl: http://kaiburr-kc:8080
+        name: repolinkTesting
+        username: repolink-testing
+      resultsToKeep: 100
+      default: true
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true

@@ -1,0 +1,94 @@
+---
+RestBlueprint:
+  name: Kaiburr-Rule-Results
+  toolName: Kaiburr-Api
+  requests:
+  - RestRequest:
+      name: getLatestRuleResultById
+      actionName: READ
+      subActionName: getLatestRuleResultById
+      method: GET
+      url: "{{serverUrl}}/api/rules/{{rulesetId}}?latest=true"
+      auth:
+        type: basic
+        json: "{\"type\":\"basic\",\"basic\":[{\"key\":\"password\",\"value\":\"{{password}}\"\
+          ,\"type\":\"string\"},{\"key\":\"username\",\"value\":\"{{username}}\",\"\
+          type\":\"string\"}]}"
+      headerJson: "[]"
+      body:
+        mode: none
+        json: "{}"
+      eventsJson: "[]"
+      variables:
+      - RestRequestVariable:
+          name: serverUrl
+          label: Server Url
+          type: NORMAL
+          doubleEscaping: true
+      - RestRequestVariable:
+          name: rulesetId
+          label: rule Set ID
+          type: NORMAL
+          doubleEscaping: true
+  - RestRequest:
+      name: getRuleResultByJobRun
+      actionName: READ
+      subActionName: getRuleResultByJobRun
+      method: GET
+      url: "{{serverUrl}}/api/rules/{{rulesetId}}?jobRunId={{jobRunId}}"
+      auth:
+        type: basic
+        json: "{\"type\":\"basic\",\"basic\":[{\"key\":\"password\",\"value\":\"{{password}}\"\
+          ,\"type\":\"string\"},{\"key\":\"username\",\"value\":\"{{username}}\",\"\
+          type\":\"string\"}]}"
+      headerJson: "[]"
+      body:
+        mode: none
+        json: "{}"
+      eventsJson: "[]"
+      variables:
+      - RestRequestVariable:
+          name: serverUrl
+          label: Server Url
+          type: NORMAL
+          doubleEscaping: true
+      - RestRequestVariable:
+          name: rulesetId
+          label: rule Set ID
+          type: NORMAL
+          doubleEscaping: true
+      - RestRequestVariable:
+          name: jobRunId
+          label: Job Run Id
+          type: NORMAL
+          doubleEscaping: true
+  - RestRequest:
+      name: getLatestRuleResultByName
+      actionName: READ
+      subActionName: getRuleResult
+      method: GET
+      url: "{{serverUrl}}/api/rules/rulesetName/{{name}}?latest=true"
+      auth:
+        type: basic
+        json: "{\"type\":\"basic\",\"basic\":[{\"key\":\"password\",\"value\":\"{{password}}\"\
+          ,\"type\":\"string\"},{\"key\":\"username\",\"value\":\"{{username}}\",\"\
+          type\":\"string\"}]}"
+      headerJson: "[]"
+      body:
+        mode: none
+        json: "{}"
+      eventsJson: "[]"
+      variables:
+      - RestRequestVariable:
+          name: serverUrl
+          label: Server Url
+          type: NORMAL
+          doubleEscaping: true
+      - RestRequestVariable:
+          name: name
+          label: rule Set Name
+          type: NORMAL
+          doubleEscaping: true
+  credentials: Kaiburr
+  debugMode: true
+  verifySsl: true
