@@ -6,10 +6,10 @@ Job:
       toolName: Kaiburr-Api
       requestName: getLatestRuleResultByName
       parameters:
-        serverUrl: kaiburr-kc
+        password: Ucq3w3TAgFDVU5
+        serverUrl: http://kaiburr-kc
         name: repolinkTesting
         username: repolink-testing
-        password: Ucq3w3TAgFDVU5
       resultsToKeep: 100
       default: true
   maxDuration: 24
