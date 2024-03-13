@@ -11,8 +11,7 @@ Job:
       awsCollectorOptions:
         keepOlderRecords: false
         enableFunctions:
-        - COLLECT_KMS
-        - COLLECT_EC2
+        - COLLECT_ELASTIC_LOAD_BALANCING
   maxDuration: 24
   hidden: false
   addChildGroupsToDataScope: true
