@@ -1,4 +1,6 @@
 ---
 Job:
   name: repo
-
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true
