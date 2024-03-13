@@ -63,7 +63,7 @@
                 
         <camunda:inputOutput>
                     
-          <camunda:inputParameter name="serverUrl">kaiburr-kc</camunda:inputParameter>
+          <camunda:inputParameter name="serverUrl">http://kaiburr-kc:8080</camunda:inputParameter>
                     
           <camunda:inputParameter name="name">repolinkTesting</camunda:inputParameter>
                   
