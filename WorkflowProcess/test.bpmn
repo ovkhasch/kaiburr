@@ -3,7 +3,7 @@
     
   <bpmn2:process id="Proc_M9nFqCIRW" isClosed="false" isExecutable="true" kaiburr:workflowType="workflow" name="test" processType="None">
         
-    <bpmn2:startEvent id="StartEvent_1" isInterrupting="true" name="aaa" parallelMultiple="false">
+    <bpmn2:startEvent id="StartEvent_1" isInterrupting="true" name="&#10;&#10;&#10;" parallelMultiple="false">
             
       <bpmn2:outgoing>Flow_09hqeh1</bpmn2:outgoing>
           
@@ -11,51 +11,43 @@
         
     <bpmn2:endEvent id="Event_0i1zu6q">
             
-      <bpmn2:incoming>Flow_1hgfnda</bpmn2:incoming>
+      <bpmn2:incoming>Flow_11hwlb8</bpmn2:incoming>
           
     </bpmn2:endEvent>
         
-    <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Activity_09pgqwc"/>
+    <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Gateway_17yhs62"/>
         
     <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_0cxa7j1" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="repolinkTesting" kaiburr:configName="jenkins" kaiburr:projectName="freestyle-test" kaiburr:subType="kaiburr:JenkinsTask" name="jenkins" startQuantity="1">
             
-      <bpmn2:incoming>Flow_19hvbvd</bpmn2:incoming>
+      <bpmn2:incoming>Flow_1xmrcvl</bpmn2:incoming>
             
-      <bpmn2:outgoing>Flow_1frwtk8</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_1hiekfy</bpmn2:outgoing>
           
     </bpmn2:serviceTask>
-        
-    <bpmn2:sequenceFlow id="Flow_1frwtk8" sourceRef="Activity_0cxa7j1" targetRef="Activity_0pov9z6"/>
         
     <bpmn2:serviceTask camunda:topic="DataCollectorTask" camunda:type="external" completionQuantity="1" id="Activity_0pov9z6" implementation="##WebService" isForCompensation="false" kaiburr:jobName="Github-collector" kaiburr:subType="kaiburr:DataCollectorTask" name="github collector" startQuantity="1">
             
-      <bpmn2:incoming>Flow_1frwtk8</bpmn2:incoming>
+      <bpmn2:incoming>Flow_04x1htz</bpmn2:incoming>
             
-      <bpmn2:outgoing>Flow_1i4be3n</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_0iqiots</bpmn2:outgoing>
           
     </bpmn2:serviceTask>
-        
-    <bpmn2:sequenceFlow id="Flow_1i4be3n" sourceRef="Activity_0pov9z6" targetRef="Activity_19kafkp"/>
         
     <bpmn2:serviceTask camunda:topic="AssessmentTask" camunda:type="external" completionQuantity="1" id="Activity_19kafkp" implementation="##WebService" isForCompensation="false" kaiburr:applicationName="tomcatHello" kaiburr:assessmentType="Sonarqube" kaiburr:branchName="master" kaiburr:chronoUnit="WEEKS" kaiburr:configBlueprint="repolinkTesting" kaiburr:configName="sonar" kaiburr:repositoryConfig="tomcatHello" kaiburr:subType="kaiburr:AssessmentTask" name="sonar" startQuantity="1">
             
-      <bpmn2:incoming>Flow_1i4be3n</bpmn2:incoming>
+      <bpmn2:incoming>Flow_05qvxmg</bpmn2:incoming>
             
-      <bpmn2:outgoing>Flow_06qr6x6</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_1dzirk2</bpmn2:outgoing>
           
     </bpmn2:serviceTask>
-        
-    <bpmn2:sequenceFlow id="Flow_06qr6x6" sourceRef="Activity_19kafkp" targetRef="Activity_0mllogz"/>
         
     <bpmn2:serviceTask camunda:topic="RuleSetJobTask" camunda:type="external" completionQuantity="1" id="Activity_0mllogz" implementation="##WebService" isForCompensation="false" kaiburr:jobName="rule" kaiburr:subType="kaiburr:RuleSetJobTask" name="rule" startQuantity="1">
             
-      <bpmn2:incoming>Flow_06qr6x6</bpmn2:incoming>
+      <bpmn2:incoming>Flow_069fjdc</bpmn2:incoming>
             
-      <bpmn2:outgoing>Flow_1hgfnda</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_04g6o29</bpmn2:outgoing>
           
     </bpmn2:serviceTask>
-        
-    <bpmn2:sequenceFlow id="Flow_1hgfnda" sourceRef="Activity_0mllogz" targetRef="Event_0i1zu6q"/>
         
     <bpmn2:serviceTask camunda:topic="RestTask" camunda:type="external" completionQuantity="1" id="Activity_09pgqwc" implementation="##WebService" isForCompensation="false" kaiburr:actionName="Get" kaiburr:subActionName="getRuleResult" kaiburr:subType="kaiburr:RestTask" kaiburr:toolName="Kaiburr-Api" name="rest" startQuantity="1">
             
@@ -71,13 +63,81 @@
               
       </bpmn2:extensionElements>
             
-      <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
+      <bpmn2:incoming>Flow_032nqgy</bpmn2:incoming>
             
-      <bpmn2:outgoing>Flow_19hvbvd</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_0m4xcbm</bpmn2:outgoing>
           
     </bpmn2:serviceTask>
         
-    <bpmn2:sequenceFlow id="Flow_19hvbvd" sourceRef="Activity_09pgqwc" targetRef="Activity_0cxa7j1"/>
+    <bpmn2:parallelGateway gatewayDirection="Unspecified" id="Gateway_17yhs62">
+            
+      <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
+            
+      <bpmn2:outgoing>Flow_032nqgy</bpmn2:outgoing>
+            
+      <bpmn2:outgoing>Flow_1xmrcvl</bpmn2:outgoing>
+            
+      <bpmn2:outgoing>Flow_04x1htz</bpmn2:outgoing>
+            
+      <bpmn2:outgoing>Flow_05qvxmg</bpmn2:outgoing>
+            
+      <bpmn2:outgoing>Flow_069fjdc</bpmn2:outgoing>
+            
+      <bpmn2:outgoing>Flow_1dvhm8y</bpmn2:outgoing>
+          
+    </bpmn2:parallelGateway>
+        
+    <bpmn2:sequenceFlow id="Flow_032nqgy" sourceRef="Gateway_17yhs62" targetRef="Activity_09pgqwc"/>
+        
+    <bpmn2:sequenceFlow id="Flow_0m4xcbm" sourceRef="Activity_09pgqwc" targetRef="Gateway_0jgp63s"/>
+        
+    <bpmn2:parallelGateway gatewayDirection="Unspecified" id="Gateway_0jgp63s">
+            
+      <bpmn2:incoming>Flow_0m4xcbm</bpmn2:incoming>
+            
+      <bpmn2:incoming>Flow_1hiekfy</bpmn2:incoming>
+            
+      <bpmn2:incoming>Flow_0iqiots</bpmn2:incoming>
+            
+      <bpmn2:incoming>Flow_04g6o29</bpmn2:incoming>
+            
+      <bpmn2:incoming>Flow_1dzirk2</bpmn2:incoming>
+            
+      <bpmn2:incoming>Flow_06n22v4</bpmn2:incoming>
+            
+      <bpmn2:outgoing>Flow_11hwlb8</bpmn2:outgoing>
+          
+    </bpmn2:parallelGateway>
+        
+    <bpmn2:sequenceFlow id="Flow_11hwlb8" sourceRef="Gateway_0jgp63s" targetRef="Event_0i1zu6q"/>
+        
+    <bpmn2:sequenceFlow id="Flow_1xmrcvl" sourceRef="Gateway_17yhs62" targetRef="Activity_0cxa7j1"/>
+        
+    <bpmn2:sequenceFlow id="Flow_1hiekfy" sourceRef="Activity_0cxa7j1" targetRef="Gateway_0jgp63s"/>
+        
+    <bpmn2:sequenceFlow id="Flow_0iqiots" sourceRef="Activity_0pov9z6" targetRef="Gateway_0jgp63s"/>
+        
+    <bpmn2:sequenceFlow id="Flow_04x1htz" sourceRef="Gateway_17yhs62" targetRef="Activity_0pov9z6"/>
+        
+    <bpmn2:sequenceFlow id="Flow_05qvxmg" sourceRef="Gateway_17yhs62" targetRef="Activity_19kafkp"/>
+        
+    <bpmn2:sequenceFlow id="Flow_069fjdc" sourceRef="Gateway_17yhs62" targetRef="Activity_0mllogz"/>
+        
+    <bpmn2:sequenceFlow id="Flow_04g6o29" sourceRef="Activity_0mllogz" targetRef="Gateway_0jgp63s"/>
+        
+    <bpmn2:sequenceFlow id="Flow_1dzirk2" sourceRef="Activity_19kafkp" targetRef="Gateway_0jgp63s"/>
+        
+    <bpmn2:serviceTask camunda:topic="DataCollectorTask" camunda:type="external" completionQuantity="1" id="Activity_1bmudip" implementation="##WebService" isForCompensation="false" kaiburr:subType="kaiburr:DataCollectorTask" name="aws collector" startQuantity="1">
+            
+      <bpmn2:incoming>Flow_1dvhm8y</bpmn2:incoming>
+            
+      <bpmn2:outgoing>Flow_06n22v4</bpmn2:outgoing>
+          
+    </bpmn2:serviceTask>
+        
+    <bpmn2:sequenceFlow id="Flow_06n22v4" sourceRef="Activity_1bmudip" targetRef="Gateway_0jgp63s"/>
+        
+    <bpmn2:sequenceFlow id="Flow_1dvhm8y" sourceRef="Gateway_17yhs62" targetRef="Activity_1bmudip"/>
       
   </bpmn2:process>
     
@@ -85,99 +145,203 @@
         
     <bpmndi:BPMNPlane bpmnElement="Proc_M9nFqCIRW" id="BPMNPlane_1">
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_19hvbvd" id="Flow_19hvbvd_di">
-                
-        <di:waypoint x="450" y="258"/>
-                
-        <di:waypoint x="500" y="258"/>
-              
-      </bpmndi:BPMNEdge>
-            
-      <bpmndi:BPMNEdge bpmnElement="Flow_1hgfnda" id="Flow_1hgfnda_di">
-                
-        <di:waypoint x="990" y="258"/>
-                
-        <di:waypoint x="1052" y="258"/>
-              
-      </bpmndi:BPMNEdge>
-            
-      <bpmndi:BPMNEdge bpmnElement="Flow_06qr6x6" id="Flow_06qr6x6_di">
-                
-        <di:waypoint x="850" y="258"/>
-                
-        <di:waypoint x="890" y="258"/>
-              
-      </bpmndi:BPMNEdge>
-            
-      <bpmndi:BPMNEdge bpmnElement="Flow_1i4be3n" id="Flow_1i4be3n_di">
-                
-        <di:waypoint x="730" y="258"/>
-                
-        <di:waypoint x="750" y="258"/>
-              
-      </bpmndi:BPMNEdge>
-            
-      <bpmndi:BPMNEdge bpmnElement="Flow_1frwtk8" id="Flow_1frwtk8_di">
-                
-        <di:waypoint x="600" y="258"/>
-                
-        <di:waypoint x="630" y="258"/>
-              
-      </bpmndi:BPMNEdge>
-            
       <bpmndi:BPMNEdge bpmnElement="Flow_09hqeh1" id="Flow_09hqeh1_di">
                 
-        <di:waypoint x="308" y="258"/>
+        <di:waypoint x="228" y="300"/>
                 
-        <di:waypoint x="350" y="258"/>
+        <di:waypoint x="265" y="300"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
+      <bpmndi:BPMNEdge bpmnElement="Flow_032nqgy" id="Flow_032nqgy_di">
                 
-        <dc:Bounds height="36" width="36" x="272" y="240"/>
+        <di:waypoint x="290" y="275"/>
                 
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="14" width="19" x="281" y="283"/>
-                  
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="290" y="80"/>
+                
+        <di:waypoint x="350" y="80"/>
               
-      </bpmndi:BPMNShape>
+      </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_0m4xcbm" id="Flow_0m4xcbm_di">
                 
-        <dc:Bounds height="36" width="36" x="1052" y="240"/>
+        <di:waypoint x="450" y="80"/>
+                
+        <di:waypoint x="740" y="80"/>
+                
+        <di:waypoint x="740" y="275"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_11hwlb8" id="Flow_11hwlb8_di">
+                
+        <di:waypoint x="765" y="300"/>
+                
+        <di:waypoint x="832" y="300"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1xmrcvl" id="Flow_1xmrcvl_di">
+                
+        <di:waypoint x="290" y="275"/>
+                
+        <di:waypoint x="290" y="190"/>
+                
+        <di:waypoint x="350" y="190"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1hiekfy" id="Flow_1hiekfy_di">
+                
+        <di:waypoint x="450" y="190"/>
+                
+        <di:waypoint x="583" y="190"/>
+                
+        <di:waypoint x="583" y="300"/>
+                
+        <di:waypoint x="715" y="300"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_0iqiots" id="Flow_0iqiots_di">
+                
+        <di:waypoint x="450" y="300"/>
+                
+        <di:waypoint x="715" y="300"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_04x1htz" id="Flow_04x1htz_di">
+                
+        <di:waypoint x="315" y="300"/>
+                
+        <di:waypoint x="350" y="300"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_05qvxmg" id="Flow_05qvxmg_di">
+                
+        <di:waypoint x="290" y="325"/>
+                
+        <di:waypoint x="290" y="400"/>
+                
+        <di:waypoint x="350" y="400"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_069fjdc" id="Flow_069fjdc_di">
+                
+        <di:waypoint x="290" y="325"/>
+                
+        <di:waypoint x="290" y="510"/>
+                
+        <di:waypoint x="350" y="510"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_04g6o29" id="Flow_04g6o29_di">
+                
+        <di:waypoint x="450" y="510"/>
+                
+        <di:waypoint x="740" y="510"/>
+                
+        <di:waypoint x="740" y="325"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1dzirk2" id="Flow_1dzirk2_di">
+                
+        <di:waypoint x="450" y="400"/>
+                
+        <di:waypoint x="740" y="400"/>
+                
+        <di:waypoint x="740" y="325"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_06n22v4" id="Flow_06n22v4_di">
+                
+        <di:waypoint x="450" y="630"/>
+                
+        <di:waypoint x="740" y="630"/>
+                
+        <di:waypoint x="740" y="325"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1dvhm8y" id="Flow_1dvhm8y_di">
+                
+        <di:waypoint x="290" y="325"/>
+                
+        <di:waypoint x="290" y="630"/>
+                
+        <di:waypoint x="350" y="630"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_09pgqwc" id="Activity_09pgqwc_di">
+                
+        <dc:Bounds height="80" width="100" x="350" y="40"/>
               
       </bpmndi:BPMNShape>
             
       <bpmndi:BPMNShape bpmnElement="Activity_0cxa7j1" id="Activity_0cxa7j1_di">
                 
-        <dc:Bounds height="80" width="100" x="500" y="218"/>
+        <dc:Bounds height="80" width="100" x="350" y="150"/>
               
       </bpmndi:BPMNShape>
             
       <bpmndi:BPMNShape bpmnElement="Activity_0pov9z6" id="Activity_0pov9z6_di">
                 
-        <dc:Bounds height="80" width="100" x="630" y="218"/>
+        <dc:Bounds height="80" width="100" x="350" y="260"/>
               
       </bpmndi:BPMNShape>
             
       <bpmndi:BPMNShape bpmnElement="Activity_19kafkp" id="Activity_19kafkp_di">
                 
-        <dc:Bounds height="80" width="100" x="750" y="218"/>
+        <dc:Bounds height="80" width="100" x="350" y="360"/>
               
       </bpmndi:BPMNShape>
             
       <bpmndi:BPMNShape bpmnElement="Activity_0mllogz" id="Activity_0mllogz_di">
                 
-        <dc:Bounds height="80" width="100" x="890" y="218"/>
+        <dc:Bounds height="80" width="100" x="350" y="470"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="Activity_09pgqwc" id="Activity_09pgqwc_di">
+      <bpmndi:BPMNShape bpmnElement="Activity_1bmudip" id="Activity_1bmudip_di">
                 
-        <dc:Bounds height="80" width="100" x="350" y="218"/>
+        <dc:Bounds height="80" width="100" x="350" y="590"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Gateway_0jgp63s" id="Gateway_1f84lwr_di">
+                
+        <dc:Bounds height="50" width="50" x="715" y="275"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
+                
+        <dc:Bounds height="36" width="36" x="832" y="282"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Gateway_17yhs62" id="Gateway_17yhs62_di">
+                
+        <dc:Bounds height="50" width="50" x="265" y="275"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
+                
+        <dc:Bounds height="36" width="36" x="192" y="282"/>
+                
+        <bpmndi:BPMNLabel>
+                    
+          <dc:Bounds height="14" width="19" x="201" y="325"/>
+                  
+        </bpmndi:BPMNLabel>
               
       </bpmndi:BPMNShape>
           
