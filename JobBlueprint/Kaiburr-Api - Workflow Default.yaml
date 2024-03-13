@@ -1,0 +1,12 @@
+---
+Job:
+  name: Kaiburr-Api - Workflow Default
+  payload:
+    RestWorkloadPayload:
+      toolName: Kaiburr-Api
+      requestName: "${requestName}"
+      resultsToKeep: 100
+      default: true
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true
