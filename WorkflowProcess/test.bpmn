@@ -17,7 +17,7 @@
         
     <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Activity_0cxa7j1"/>
         
-    <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_0cxa7j1" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="jenkins" kaiburr:configName="jenkins" kaiburr:projectName="freestyle-test" kaiburr:subType="kaiburr:JenkinsTask" name="jenkins" startQuantity="1">
+    <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_0cxa7j1" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="repolink-testing" kaiburr:configName="jenkins" kaiburr:projectName="freestyle-test" kaiburr:subType="kaiburr:JenkinsTask" name="jenkins" startQuantity="1">
             
       <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
             
