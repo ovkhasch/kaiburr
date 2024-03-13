@@ -1,9 +1,0 @@
----
-Job:
-  name: parent
-  payload:
-    OctaneCollectorJobPayload:
-      resultsToKeep: 22
-      displayDebugMessage: false
-  hidden: false
-  addChildGroupsToDataScope: true
