@@ -59,6 +59,18 @@
         
     <bpmn2:serviceTask camunda:topic="RestTask" camunda:type="external" completionQuantity="1" id="Activity_09pgqwc" implementation="##WebService" isForCompensation="false" kaiburr:actionName="Get" kaiburr:subActionName="getRuleResult" kaiburr:subType="kaiburr:RestTask" kaiburr:toolName="Kaiburr-Api" name="rest" startQuantity="1">
             
+      <bpmn2:extensionElements>
+                
+        <camunda:inputOutput>
+                    
+          <camunda:inputParameter name="serverUrl">kaiburr-kc</camunda:inputParameter>
+                    
+          <camunda:inputParameter name="name">repolinkTesting</camunda:inputParameter>
+                  
+        </camunda:inputOutput>
+              
+      </bpmn2:extensionElements>
+            
       <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
             
       <bpmn2:outgoing>Flow_19hvbvd</bpmn2:outgoing>
@@ -72,6 +84,14 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         
     <bpmndi:BPMNPlane bpmnElement="Proc_M9nFqCIRW" id="BPMNPlane_1">
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_19hvbvd" id="Flow_19hvbvd_di">
+                
+        <di:waypoint x="450" y="258"/>
+                
+        <di:waypoint x="500" y="258"/>
+              
+      </bpmndi:BPMNEdge>
             
       <bpmndi:BPMNEdge bpmnElement="Flow_1hgfnda" id="Flow_1hgfnda_di">
                 
@@ -113,13 +133,17 @@
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_19hvbvd" id="Flow_19hvbvd_di">
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
                 
-        <di:waypoint x="450" y="258"/>
+        <dc:Bounds height="36" width="36" x="272" y="240"/>
                 
-        <di:waypoint x="500" y="258"/>
+        <bpmndi:BPMNLabel>
+                    
+          <dc:Bounds height="14" width="19" x="281" y="283"/>
+                  
+        </bpmndi:BPMNLabel>
               
-      </bpmndi:BPMNEdge>
+      </bpmndi:BPMNShape>
             
       <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
                 
@@ -148,18 +172,6 @@
       <bpmndi:BPMNShape bpmnElement="Activity_0mllogz" id="Activity_0mllogz_di">
                 
         <dc:Bounds height="80" width="100" x="890" y="218"/>
-              
-      </bpmndi:BPMNShape>
-            
-      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
-                
-        <dc:Bounds height="36" width="36" x="272" y="240"/>
-                
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="14" width="19" x="281" y="283"/>
-                  
-        </bpmndi:BPMNLabel>
               
       </bpmndi:BPMNShape>
             
