@@ -5,6 +5,8 @@ Job:
     GithubCollectorJobPayload:
       configurationBlueprint: repolinkTesting
       configName: github-ovkhasch-kaiburr
+      repositoriesNames:
+      - kaiburr
       branchNameRegex: false
       collectRepositoryData: true
       collectBranchData: true
