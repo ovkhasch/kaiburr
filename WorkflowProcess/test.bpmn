@@ -11,7 +11,7 @@
         
     <bpmn2:endEvent id="Event_0i1zu6q">
             
-      <bpmn2:incoming>Flow_1frwtk8</bpmn2:incoming>
+      <bpmn2:incoming>Flow_1i4be3n</bpmn2:incoming>
           
     </bpmn2:endEvent>
         
@@ -25,7 +25,17 @@
           
     </bpmn2:serviceTask>
         
-    <bpmn2:sequenceFlow id="Flow_1frwtk8" sourceRef="Activity_0cxa7j1" targetRef="Event_0i1zu6q"/>
+    <bpmn2:sequenceFlow id="Flow_1frwtk8" sourceRef="Activity_0cxa7j1" targetRef="Activity_0pov9z6"/>
+        
+    <bpmn2:serviceTask camunda:topic="DataCollectorTask" camunda:type="external" completionQuantity="1" id="Activity_0pov9z6" implementation="##WebService" isForCompensation="false" kaiburr:jobName="Github-collector" kaiburr:subType="kaiburr:DataCollectorTask" name="github collector" startQuantity="1">
+            
+      <bpmn2:incoming>Flow_1frwtk8</bpmn2:incoming>
+            
+      <bpmn2:outgoing>Flow_1i4be3n</bpmn2:outgoing>
+          
+    </bpmn2:serviceTask>
+        
+    <bpmn2:sequenceFlow id="Flow_1i4be3n" sourceRef="Activity_0pov9z6" targetRef="Event_0i1zu6q"/>
       
   </bpmn2:process>
     
@@ -37,7 +47,7 @@
                 
         <di:waypoint x="600" y="258"/>
                 
-        <di:waypoint x="642" y="258"/>
+        <di:waypoint x="630" y="258"/>
               
       </bpmndi:BPMNEdge>
             
@@ -46,6 +56,14 @@
         <di:waypoint x="448" y="258"/>
                 
         <di:waypoint x="500" y="258"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1i4be3n" id="Flow_1i4be3n_di">
+                
+        <di:waypoint x="730" y="258"/>
+                
+        <di:waypoint x="922" y="258"/>
               
       </bpmndi:BPMNEdge>
             
@@ -61,15 +79,21 @@
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
-                
-        <dc:Bounds height="36" width="36" x="642" y="240"/>
-              
-      </bpmndi:BPMNShape>
-            
       <bpmndi:BPMNShape bpmnElement="Activity_0cxa7j1" id="Activity_0cxa7j1_di">
                 
         <dc:Bounds height="80" width="100" x="500" y="218"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
+                
+        <dc:Bounds height="36" width="36" x="922" y="240"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_0pov9z6" id="Activity_0pov9z6_di">
+                
+        <dc:Bounds height="80" width="100" x="630" y="218"/>
               
       </bpmndi:BPMNShape>
           
