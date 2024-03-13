@@ -9,7 +9,7 @@ RulesetBlueprint:
     ruleEngine: GROOVY
     ruleCategory: COMPLIANCE_CONTROLS
     ruleSeverity: MEDIUM
-    rule: '''repo-kaiburr-dev'''
+    rule: result.message = 'repo-kaiburr-dev'
     resultSettings:
       storePassedItems: true
       limit: 50
