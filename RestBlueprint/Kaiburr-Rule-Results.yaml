@@ -65,7 +65,7 @@ RestBlueprint:
   - RestRequest:
       name: getLatestRuleResultByName
       actionName: READ
-      subActionName: getRuleResult
+      subActionName: getLatestRuleResultByName
       method: GET
       url: "{{serverUrl}}/api/rules/rulesetName/{{name}}?latest=true"
       auth:
