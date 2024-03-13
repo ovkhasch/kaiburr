@@ -1,6 +1,0 @@
----
-Job:
-  name: Templates
-  maxDuration: 24
-  hidden: false
-  addChildGroupsToDataScope: true
