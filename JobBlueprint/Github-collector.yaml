@@ -1,0 +1,24 @@
+---
+Job:
+  name: Github-collector
+  payload:
+    GithubCollectorJobPayload:
+      configurationBlueprint: testing-dev
+      configName: Github-ovkhasch-kaiburr
+      branchNameRegex: false
+      collectRepositoryData: true
+      collectBranchData: true
+      collectPullRequestData: true
+      collectCommitsData: true
+      collectPipelineData: true
+      collectFileData: false
+      collectArtifactsData: false
+      collectToolHierarchyData: false
+      limitExecutions: 0
+      limitLogs: 0
+      resultsToKeep: 30
+      displayDebugMessage: false
+      debugMode: false
+  maxDuration: 24
+  hidden: false
+  addChildGroupsToDataScope: true
