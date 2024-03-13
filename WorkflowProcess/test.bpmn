@@ -11,7 +11,7 @@
         
     <bpmn2:endEvent id="Event_0i1zu6q">
             
-      <bpmn2:incoming>Flow_1i4be3n</bpmn2:incoming>
+      <bpmn2:incoming>Flow_00xhxv1</bpmn2:incoming>
           
     </bpmn2:endEvent>
         
@@ -35,13 +35,31 @@
           
     </bpmn2:serviceTask>
         
-    <bpmn2:sequenceFlow id="Flow_1i4be3n" sourceRef="Activity_0pov9z6" targetRef="Event_0i1zu6q"/>
+    <bpmn2:sequenceFlow id="Flow_1i4be3n" sourceRef="Activity_0pov9z6" targetRef="Activity_15rzu0z"/>
+        
+    <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_15rzu0z" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="repolink-testing" kaiburr:configName="Sonar" kaiburr:projectName="tomcat-hello" kaiburr:subType="kaiburr:JenkinsTask" name="Sonar" startQuantity="1">
+            
+      <bpmn2:incoming>Flow_1i4be3n</bpmn2:incoming>
+            
+      <bpmn2:outgoing>Flow_00xhxv1</bpmn2:outgoing>
+          
+    </bpmn2:serviceTask>
+        
+    <bpmn2:sequenceFlow id="Flow_00xhxv1" sourceRef="Activity_15rzu0z" targetRef="Event_0i1zu6q"/>
       
   </bpmn2:process>
     
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         
     <bpmndi:BPMNPlane bpmnElement="Proc_M9nFqCIRW" id="BPMNPlane_1">
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1i4be3n" id="Flow_1i4be3n_di">
+                
+        <di:waypoint x="730" y="258"/>
+                
+        <di:waypoint x="770" y="258"/>
+              
+      </bpmndi:BPMNEdge>
             
       <bpmndi:BPMNEdge bpmnElement="Flow_1frwtk8" id="Flow_1frwtk8_di">
                 
@@ -59,9 +77,9 @@
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_1i4be3n" id="Flow_1i4be3n_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_00xhxv1" id="Flow_00xhxv1_di">
                 
-        <di:waypoint x="730" y="258"/>
+        <di:waypoint x="870" y="258"/>
                 
         <di:waypoint x="922" y="258"/>
               
@@ -79,21 +97,27 @@
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="Activity_0cxa7j1" id="Activity_0cxa7j1_di">
-                
-        <dc:Bounds height="80" width="100" x="500" y="218"/>
-              
-      </bpmndi:BPMNShape>
-            
       <bpmndi:BPMNShape bpmnElement="Event_0i1zu6q" id="Event_0i1zu6q_di">
                 
         <dc:Bounds height="36" width="36" x="922" y="240"/>
               
       </bpmndi:BPMNShape>
             
+      <bpmndi:BPMNShape bpmnElement="Activity_0cxa7j1" id="Activity_0cxa7j1_di">
+                
+        <dc:Bounds height="80" width="100" x="500" y="218"/>
+              
+      </bpmndi:BPMNShape>
+            
       <bpmndi:BPMNShape bpmnElement="Activity_0pov9z6" id="Activity_0pov9z6_di">
                 
         <dc:Bounds height="80" width="100" x="630" y="218"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_15rzu0z" id="Activity_15rzu0z_di">
+                
+        <dc:Bounds height="80" width="100" x="770" y="218"/>
               
       </bpmndi:BPMNShape>
           
