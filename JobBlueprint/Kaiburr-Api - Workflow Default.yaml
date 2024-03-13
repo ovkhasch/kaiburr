@@ -7,7 +7,7 @@ Job:
       requestName: getLatestRuleResultByName
       parameters:
         password: Ucq3w3TAgFDVU5
-        serverUrl: http://kaiburr-kc
+        serverUrl: http://kaiburr-kc:8080
         name: repolinkTesting
         username: repolink-testing
       resultsToKeep: 100
