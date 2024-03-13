@@ -11,13 +11,13 @@
         
     <bpmn2:endEvent id="Event_0i1zu6q">
             
-      <bpmn2:incoming>Flow_00xhxv1</bpmn2:incoming>
+      <bpmn2:incoming>Flow_06qr6x6</bpmn2:incoming>
           
     </bpmn2:endEvent>
         
     <bpmn2:sequenceFlow id="Flow_09hqeh1" sourceRef="StartEvent_1" targetRef="Activity_0cxa7j1"/>
         
-    <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_0cxa7j1" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="repolink-testing" kaiburr:configName="jenkins" kaiburr:projectName="freestyle-test" kaiburr:subType="kaiburr:JenkinsTask" name="jenkins" startQuantity="1">
+    <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_0cxa7j1" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="repolinkTesting" kaiburr:configName="jenkins" kaiburr:projectName="freestyle-test" kaiburr:subType="kaiburr:JenkinsTask" name="jenkins" startQuantity="1">
             
       <bpmn2:incoming>Flow_09hqeh1</bpmn2:incoming>
             
@@ -35,17 +35,17 @@
           
     </bpmn2:serviceTask>
         
-    <bpmn2:sequenceFlow id="Flow_1i4be3n" sourceRef="Activity_0pov9z6" targetRef="Activity_15rzu0z"/>
+    <bpmn2:sequenceFlow id="Flow_1i4be3n" sourceRef="Activity_0pov9z6" targetRef="Activity_19kafkp"/>
         
-    <bpmn2:serviceTask camunda:topic="JenkinsTask" camunda:type="external" completionQuantity="1" id="Activity_15rzu0z" implementation="##WebService" isForCompensation="false" kaiburr:configBlueprint="repolink-testing" kaiburr:configName="Sonar" kaiburr:projectName="tomcat-hello" kaiburr:subType="kaiburr:JenkinsTask" name="Sonar" startQuantity="1">
+    <bpmn2:serviceTask camunda:topic="AssessmentTask" camunda:type="external" completionQuantity="1" id="Activity_19kafkp" implementation="##WebService" isForCompensation="false" kaiburr:applicationName="tomcatHello" kaiburr:assessmentType="Sonarqube" kaiburr:chronoUnit="WEEKS" kaiburr:configBlueprint="repolinkTesting" kaiburr:configName="sonar" kaiburr:subType="kaiburr:AssessmentTask" name="sonar" startQuantity="1">
             
       <bpmn2:incoming>Flow_1i4be3n</bpmn2:incoming>
             
-      <bpmn2:outgoing>Flow_00xhxv1</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_06qr6x6</bpmn2:outgoing>
           
     </bpmn2:serviceTask>
         
-    <bpmn2:sequenceFlow id="Flow_00xhxv1" sourceRef="Activity_15rzu0z" targetRef="Event_0i1zu6q"/>
+    <bpmn2:sequenceFlow id="Flow_06qr6x6" sourceRef="Activity_19kafkp" targetRef="Event_0i1zu6q"/>
       
   </bpmn2:process>
     
@@ -57,7 +57,7 @@
                 
         <di:waypoint x="730" y="258"/>
                 
-        <di:waypoint x="770" y="258"/>
+        <di:waypoint x="750" y="258"/>
               
       </bpmndi:BPMNEdge>
             
@@ -77,9 +77,9 @@
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_00xhxv1" id="Flow_00xhxv1_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_06qr6x6" id="Flow_06qr6x6_di">
                 
-        <di:waypoint x="870" y="258"/>
+        <di:waypoint x="850" y="258"/>
                 
         <di:waypoint x="922" y="258"/>
               
@@ -115,9 +115,9 @@
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="Activity_15rzu0z" id="Activity_15rzu0z_di">
+      <bpmndi:BPMNShape bpmnElement="Activity_19kafkp" id="Activity_19kafkp_di">
                 
-        <dc:Bounds height="80" width="100" x="770" y="218"/>
+        <dc:Bounds height="80" width="100" x="750" y="218"/>
               
       </bpmndi:BPMNShape>
           
