@@ -4,7 +4,7 @@ Job:
   payload:
     RulesetJobPayload:
       rulesetBlueprint: repolinkTesting
-      resultsToKeep: 31
-  maxDuration: 25
+      resultsToKeep: 30
+  maxDuration: 24
   hidden: false
   addChildGroupsToDataScope: true
